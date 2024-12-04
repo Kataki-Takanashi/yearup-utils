@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>YearUp Java Utilities</name>
-    <description>Utility classes for the Java yearup-pluralsight</description>
+    <description>Utility classes for the yearup-pluralsight Java bootcamp</description>
     <url>https://github.com/Kataki-Takanashi/yearup-utils</url>
 
     <licenses>
