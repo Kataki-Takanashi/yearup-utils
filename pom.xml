@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.abdurraheem</groupId>
+    <artifactId>yearup-utils</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>YearUp Java Utilities</name>
+    <description>Utility classes for the Java yearup-pluralsight</description>
+    <url>https://github.com/Kataki-Takanashi/yearup-utils</url>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>abdurraheem</id>
+            <name>Ali AbdurRaheem</name>
+            <email>dev.ali@abdurraheem.com</email>
+            <roles>
+                <role>Maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/Kataki-Takanashi/yearup-utils</url>
+        <connection>scm:git:https://github.com/Kataki-Takanashi/yearup-utils.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/Kataki-Takanashi/yearup-utils.git</developerConnection>
+    </scm>
+</project>
