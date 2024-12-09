@@ -1,4 +1,4 @@
-<h1 align="center">Yearup Util</h1>
+<h1 align="center">Yearup Utils</h1>
 
 ## Overview
 `yearup-utils` is a collection of utility classes designed to assist with common tasks in Java programming, made for students of YearUp Pluralsight Java bootcamp. This library provides functionalities for console input handling and color-coded console output.
