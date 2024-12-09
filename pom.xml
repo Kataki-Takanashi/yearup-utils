@@ -17,7 +17,6 @@
         <license>
             <name>MIT</name>
             <url>https://opensource.org/licenses/MIT</url>
-            <distribution>repo</distribution>
         </license>
     </licenses>
 
@@ -32,47 +31,59 @@
         </developer>
     </developers>
 
-    <scm>
-        <url>https://github.com/Kataki-Takanashi/yearup-utils</url>
-        <connection>scm:git:https://github.com/Kataki-Takanashi/yearup-utils.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/Kataki-Takanashi/yearup-utils.git</developerConnection>
-    </scm>
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <url>https://central.sonatype.com/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>central-snapshots</id>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.6.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>true</autoPublish>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
                 <executions>
                     <execution>
-                        <id>sign-artifacts</id>
                         <goals>
                             <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.8</version>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>ossrh-releases</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>ossrh-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <scm>
+        <connection>scm:git:git://github.com/Kataki-Takanashi/yearup-utils.git</connection>
+        <developerConnection>scm:git:ssh://github.com/Kataki-Takanashi/yearup-utils.git</developerConnection>
+        <url>https://github.com/Kataki-Takanashi/yearup-utils</url>
+    </scm>
 </project>
